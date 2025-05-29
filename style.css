@@ -1,95 +1,114 @@
-/* General Styles */
+
+
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
+  background-color: #eae8e8;
   color: #333;
 }
 
 header {
-  background: #333;
-  color: #fff;
-  padding: 1rem;
-}
-
-header h1 {
-  margin: 0;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 1rem;
+  background-color: #dfc8f1;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  text-align: center;
 }
 
 nav a {
-  color: #fff;
+  color: #000000;
+  margin: 0 10px;
   text-decoration: none;
 }
 
 main {
   display: flex;
+  gap: 20px;
+  padding: 20px;
   flex-wrap: wrap;
-  padding: 1rem;
-  gap: 1rem;
 }
 
-/* Blog Section */
-.blog-section {
+.blog-posts {
   flex: 3;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
 }
 
 .blog-card {
-  background: #fff;
-  padding: 1rem;
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(191, 85, 230, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .blog-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
 .blog-card h2 {
   margin-top: 0;
 }
 
-/* Sidebar */
-.sidebar {
-  flex: 1;
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+.blog-card a {
+  color: #007BFF;
+  text-decoration: none;
 }
 
-.sidebar section {
-  margin-bottom: 1rem;
+.sidebar {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  height: fit-content;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .sidebar h3 {
   margin-top: 0;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #333;
-  color: #fff;
-  margin-top: 1rem;
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .sidebar {
-    display: none;
-  }
+.sidebar li {
+  margin: 6px 0;
 }
+
+details {
+            width: 90%;
+            max-width: 800px;
+            margin-bottom: 20px;
+            padding: 15px 20px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #d1d9e6;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        details[open] {
+            background: #f9fcff;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            list-style: none;
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 10px;
+        }
+        summary::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1em;
+            transition: transform 0.3s ease;
+        }
+        details[open] summary::before {
+            content: "↓";
+        }
